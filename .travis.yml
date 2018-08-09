@@ -26,8 +26,7 @@ before_script:
   - sudo service crate restart
   - dotnet restore -v Minimal Npgsql.CrateDb.sln
 script:
-  # - dotnet build "test/Npgsql.CrateDbTests" -c Debug -f netcoreapp2.1
-  - dotnet test "test/Npgsql.CrateDbTests/Npgsql.CrateDbTests.csproj"
+  - dotnet test "test/Npgsql.CrateDbTests/Npgsql.CrateDbTests.csproj" -c Debug -f netcoreapp2.1
 
 cache:
   directories:
